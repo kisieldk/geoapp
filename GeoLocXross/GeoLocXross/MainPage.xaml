@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GeoLocXross"
+             x:Class="GeoLocXross.MainPage">
+	<StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+		<Label x:Name="aa" Text="Welcome to Xamarin Forms!" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+		<Button x:Name="bt" Text="Get location" Clicked="bt_Clicked"/>
+		<Button x:Name="btMap" Text="Show location on map" Clicked="btMap_Clicked" IsEnabled="False" />
+		<Button x:Name="btNavi" Text="Open navigation from my location" Clicked="btNavi_Clicked"/>
+	</StackLayout>
+
+</ContentPage>
