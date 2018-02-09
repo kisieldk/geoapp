@@ -1,11 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="15" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-	<application android:label="GeoLocXross.Android"></application>
+	<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<application android:label="GeoLocXross.Android">
+		<meta-data android:name="com.google.android.maps.v2.API_KEY"
+				 android:value="AIzaSyDBjoZKSwZAfx-Ncb2yD7JjIrxihrDLYEM" />
+	</application>
 	<intent-filter>
 		<action android:name="android.location.GPS_ENABLED_CHANGE" />
 	</intent-filter>
+  <service android:name="GeoLocXross.Droid.SensorService" android:enabled="true" >
+  </service>
+	<receiver
+            android:name="GeoLocXross.Droid.SensorRestarterBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:label="RestartServiceWhenStopped">
+   </receiver>
+
 </manifest>

@@ -85,5 +85,18 @@ namespace GeoLocXross
 			}
 	
 		}
+
+		private async void btGoogleMaps_Clicked(object sender, EventArgs e)
+		{
+			try
+			{
+				Xamarin.Forms.Maps.Position pos = new Xamarin.Forms.Maps.Position(savedPosition.Latitude,savedPosition.Longitude);				
+				await Navigation.PushAsync(new GoogleMapsPage(pos));
+			}
+			catch (Exception ex)
+			{
+
+			}
+		}
 	}
 }

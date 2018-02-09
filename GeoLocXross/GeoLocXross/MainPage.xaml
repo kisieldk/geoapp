@@ -10,6 +10,7 @@
 		<Button x:Name="bt" Text="Get location" Clicked="bt_Clicked"/>
 		<Button x:Name="btMap" Text="Show location on map" Clicked="btMap_Clicked" IsEnabled="False" />
 		<Button x:Name="btNavi" Text="Open navigation from my location" Clicked="btNavi_Clicked"/>
+		<Button x:Name="btGoogleMaps" Text="Open Google MAPS from my location" Clicked="btGoogleMaps_Clicked"/>
 	</StackLayout>
 
 </ContentPage>
